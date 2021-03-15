@@ -12,15 +12,15 @@ Post.init(
       primaryKey: true,
       autoIncrement: true
     },
-    title: {
+    blog_title: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    post_url: {
+    blog_body: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        isURL: true
+        len: [1]
       }
     },
     user_id: {
