@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const sequelize = require('../../config/connection');
+//const sequelize = require('../../config/connection');
 const { Post, User, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
@@ -9,8 +9,8 @@ router.get('/', (req, res) => {
   Post.findAll({
     attributes: [
       'id',
-      'blog_body',
       'blog_title',
+      'blog_body',
       'created_at'
     ],
     include: [
@@ -42,8 +42,8 @@ router.get('/:id', (req, res) => {
     },
     attributes: [
       'id',
-      'blog_body',
       'blog_title',
+      'blog_body',
       'created_at'
     ],
     include: [
