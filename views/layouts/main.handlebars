@@ -25,8 +25,12 @@
             </nav>
         </header>
         <section>
+            {{#if loggedIn}}
+            <p>Hello {{user.username}} </p>
+            {{else}}
             <h2>Read great technology thoughts here!</h2>
             <p>Please signup to become a user and start contributing</p>
+            {{/if}}
         </section>
         <main>
             {{{ body }}}
